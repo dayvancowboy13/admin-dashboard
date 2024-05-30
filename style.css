@@ -26,26 +26,29 @@
     grid-template-rows: 100px repeat(6, 50px) 50px repeat(3,50px);
     gap: 6px;
 
+    font-weight: 800;
     align-content: start;
 
-    font-weight: 800;
-    /* color: aliceblue; */
-    /* align-items: center; */
+    & .item {
+        display: flex;
+        align-items: center;
+        justify-content: start;       
+        gap: 10px;
+        font-size: 20px;
+    }
+
 }
 
 .sidebar-header {
-
+    font-size: 26px;
     font-weight: 950;
-    font-size:larger;
-    /* text-justify: center; */
 }
+
 
 .header {
     display:grid;
     grid-column: 2/3;
-    /* gap: 20px; */
 
-    /* grid-template: 2fr 6fr / 2fr 1fr; */
     grid-template-rows: minmax(20%, 80px) minmax(40%,120px);
     grid-template-columns: 60% 40%;
 
@@ -64,6 +67,12 @@
         border-radius: 12px;
         background-color: rgb(243, 243, 243);
         width: 90%;
+        outline-width: 0;
+    }
+
+    & input:focus {
+        background-color: rgb(230,230,230);
+        box-shadow: 2px 2px 2px rgb(97, 97, 97);
     }
 }
 
@@ -160,7 +169,7 @@
     display: grid;
     border-radius: 12px;
     padding: 18px;
-    background-color: rgb(242, 242, 242);
+    background-color: hsl(0, 0%, 100%);
     box-shadow: 2px 2px 4px rgb(42, 42, 42);
     justify-content: space-between;
 
@@ -179,6 +188,7 @@
 
     & hr {
         border: solid grey 1px;
+        background-color: grey;
         margin: 4px 0 6px 0;
     }
 }
@@ -186,6 +196,7 @@
 .card-button {
     border:none;
     border-radius: 14px;
+    background-color: hsl(0, 0%, 100%);
 }
 
 .card-button:hover {
@@ -199,7 +210,6 @@
 #announcements {
     & .content-body{
         display: grid;
-
     }
 }
 
@@ -211,7 +221,6 @@
 
     & .card {
         grid-template-rows: repeat(4,1fr);
-        /* gap: 2px; */
         padding: 8px 10px;
     }
 
@@ -222,6 +231,4 @@
     gap: 14px;
     align-items: center;
     justify-items: end;
-    /* padding: 16px; */
-
 }
